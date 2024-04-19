@@ -1,5 +1,4 @@
-'use client'
-import { useRouter } from 'next/navigation';
+import { ChangePageButton } from '../ChangePageButton';
 
 export default function AboutMe() {
   return (
@@ -9,24 +8,8 @@ export default function AboutMe() {
       </h1>
 
       <div className="container py-5 px-10 mx-0 min-w-full flex flex-col items-center">
-        <ChangePageButton str={'Home'} />
+        <ChangePageButton str={'Home'} location='/' />
       </div>
     </main>
-  );
-}
-
-function ChangePageButton({ str }: { str: string }) {
-  const router = useRouter();
-
-  const navigateToOtherPage = () => {
-    router.push('/');
-  };
-  return (
-    <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      onClick={navigateToOtherPage}
-    >
-      {str}
-    </button>
   );
 }
