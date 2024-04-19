@@ -18,7 +18,7 @@ export default function Home() {
         height={me.imageSize}
       />
       <div className="container py-5 px-10 mx-0 min-w-full flex flex-col items-center">
-        <ChangePageButton str={'About Me'} location="/About" />
+        <ChangePageButton str={'About Me'} location="/about" />
       </div>
     </main>
   );
