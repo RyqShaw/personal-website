@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ChangePageButton } from './ChangePageButton';
+import ChangePageButton from './ChangePageButton';
 const me = {
   name: 'Sharyq Siddiqi',
   imageUrl: 'https://avatars.githubusercontent.com/u/62477104?v=4',

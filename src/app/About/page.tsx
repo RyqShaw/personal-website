@@ -1,4 +1,4 @@
-import { ChangePageButton } from '../ChangePageButton';
+import ChangePageButton from '../ChangePageButton';
 import Image from 'next/image';
 
 export default function About() {

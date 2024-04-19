@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-export function ChangePageButton({ str, location }: { str: string; location: string }) {
+const ChangePageButton = ({ str, location }: { str: string; location: string }) => {
   const router = useRouter();
 
   const navigateToOtherPage = () => {
@@ -15,4 +15,6 @@ export function ChangePageButton({ str, location }: { str: string; location: str
       {str}
     </button>
   );
-}
+};
+
+export default ChangePageButton;
