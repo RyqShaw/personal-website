@@ -39,41 +39,27 @@ const SideBar = () => {
                      flex flex-col bg-zinc-300
                      dark:bg-zinc-900 text-white shadow-lg"
       >
-        <button onClick={navigateHome}>
-          <SideBarIcon icon={<FaHome size={'32'} />} text="Home" />
-        </button>
-
-        <button onClick={navigateAbout}>
-          <SideBarIcon icon={<FaBook size={'28'} className="pt-0.5" />} text="About Me" />
-        </button>
-        <button onClick={navigateProjects}>
-          <SideBarIcon icon={<FaGears size={'32'} />} text="Projects" />
-        </button>
-        <button onClick={navigateContact}>
-          <SideBarIcon icon={<FaAddressBook size={'28'} className="pl-0.5 pt-0.5" />} text="Contact Me" />
-        </button>
+          <SideBarIcon icon={<FaHome size={'32'} />} text="Home" navigate={navigateHome} />
+          <SideBarIcon icon={<FaBook size={'28'} className="pt-0.5" />} text="About Me" navigate={navigateAbout} />
+          <SideBarIcon icon={<FaGears size={'32'} />} text="Projects" navigate={navigateProjects} />
+          <SideBarIcon icon={<FaAddressBook size={'28'} className="pl-0.5 pt-0.5" />} text="Contact Me"  navigate={navigateContact}/>
       </div>
       <div
         className="fixed bottom-0 left-0 w-16 m-0 justify-end
                      flex flex-col"
       >
-        <button onClick={navigateGithub}>
-        <SideBarIcon icon={<FaGithub size={'28'} className="pt-0.5" />} text="GitHub" />
-        </button>
-        <button onClick={navigateLinkedin}>
-        <SideBarIcon icon={<FaLinkedin size={'28'} className="pt-0.5" />} text="Linkedin" />
-        </button>
+        <SideBarIcon icon={<FaGithub size={'28'} className="pt-0.5" />} text="GitHub" navigate={navigateGithub} />
+        <SideBarIcon icon={<FaLinkedin size={'28'} className="pt-0.5" />} text="Linkedin" navigate={navigateLinkedin} />
       </div>
     </div>
   );
 };
 
-const SideBarIcon = ({ icon, text = 'tooltip' }: { icon: ReactNode; text: string }) => (
-  <div className="sidebar-icon group">
+const SideBarIcon = ({ icon, text = 'tooltip', navigate }: { icon: ReactNode; text: string, navigate: any }) => (
+  <button onClick={navigate} className="sidebar-icon group">
     {icon}
-
     <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
-  </div>
+  </button>
 );
 
 const Divider = () => <hr className="sidebar-hr" />;
