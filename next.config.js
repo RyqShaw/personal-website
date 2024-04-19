@@ -1,5 +1,18 @@
 module.exports = {
   images: {
-    domains: ['avatars.githubusercontent.com', 'tsh.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
+        pathname: '/u/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tsh.io',
+        port: '',
+        pathname: '/wp-content/uploads/2019/12/**',
+      }
+    ],
   },
 };
