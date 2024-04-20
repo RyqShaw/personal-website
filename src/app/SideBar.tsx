@@ -23,12 +23,10 @@ const SideBar = () => {
   };
 
   return (
-    <div>
+    <div className='fixed top-0 left-0 h-screen w-16 m-0 flex flex-col justify-between bg-zinc-300 dark:bg-zinc-900 text-white shadow-lg'>
       {/* Page Links Links */}
       <div
-        className="fixed top-0 left-0 h-screen w-16 m-0 justify-center
-                     flex flex-col bg-zinc-300
-                     dark:bg-zinc-900 text-white shadow-lg"
+        className="flex flex-col justify-center mt-32 h-full"
       >
           <SideBarIcon icon={<FaHome size={'32'} />} text="Home" navigate={navigateHome} active={isActive('/')}/>
           <SideBarIcon icon={<FaBook size={'28'} className="pt-0.5" />} text="About Me" navigate={navigateAbout} active={isActive('/aboutme')}/>
@@ -37,8 +35,7 @@ const SideBar = () => {
       </div>
       {/* Social Media Links */}
       <div
-        className="fixed bottom-0 left-0 w-16 m-0 justify-end
-                     flex flex-col"
+        className="flex flex-col bottom-0"
       >
         <SideBarIcon icon={<FaGithub size={'28'} className="pt-0.5" />} text="GitHub" navigate={navigateGithub} active={false}/>
         <SideBarIcon icon={<FaLinkedin size={'28'} className="pt-0.5" />} text="Linkedin" navigate={navigateLinkedin} active={false}/>
