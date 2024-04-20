@@ -13,7 +13,7 @@ const SideBar = () => {
   };
 
   const navigateAbout = () => {
-    router.push('/about');
+    router.push('/aboutme');
   };
 
   const navigateProjects = () => {
