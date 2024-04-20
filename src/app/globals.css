@@ -43,6 +43,10 @@ body {
     transition-all duration-100 scale-0 origin-left;
   }
 
+  .active-icon {
+    @apply text-white bg-blue-700 rounded-xl dark:bg-red-600 
+  }
+
   .sidebar-hr {
     @apply bg-gray-200 dark:bg-gray-800 
     border border-gray-200 dark:border-gray-800 rounded-full
