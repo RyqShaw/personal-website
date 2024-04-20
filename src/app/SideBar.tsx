@@ -6,6 +6,8 @@ import { FaGears, FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { useRouter, usePathname  } from 'next/navigation';
 
 const SideBar = () => {
+
+  {/* Navigation tools */}
   const router = useRouter();
 
   const navigateHome = () =>  router.push('/');
@@ -22,6 +24,7 @@ const SideBar = () => {
 
   return (
     <div>
+      {/* Page Links Links */}
       <div
         className="fixed top-0 left-0 h-screen w-16 m-0 justify-center
                      flex flex-col bg-zinc-300
@@ -32,6 +35,7 @@ const SideBar = () => {
           <SideBarIcon icon={<FaGears size={'32'} />} text="Projects" navigate={navigateProjects} active={isActive('/projects')}/>
           <SideBarIcon icon={<FaAddressBook size={'28'} className="pl-0.5 pt-0.5" />} text="Contact Me" navigate={navigateContact} active={isActive('/contact')}/>
       </div>
+      {/* Social Media Links */}
       <div
         className="fixed bottom-0 left-0 w-16 m-0 justify-end
                      flex flex-col"
