@@ -6,7 +6,7 @@ import SideBar from './SideBar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Sharyq',
+  title: 'Sharyq Siddiqi',
   description: 'Computer Scientist, Game Designer, Software Developer',
 };
 
