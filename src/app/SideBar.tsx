@@ -48,6 +48,7 @@ const SideBar = () => {
         />
         {/* Social Media Links */}
         <div className="flex flex-col bottom-0">
+          <Divider />
           <SideBarIcon
             icon={<FaGithub size={'28'} className="pt-0.5" />}
             text="GitHub"
