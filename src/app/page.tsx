@@ -12,7 +12,7 @@ export default function Home() {
         <div
           className="bg-zinc-300 dark:bg-zinc-900 text-zinc-800
            dark:text-white shadow-lg
-            m-4 mt-8 p-8 w-fit rounded-3xl mr-10
+            m-4 mt-8 p-8 w-fit rounded-3xl mr-12
             max-w-screen-lg"
         >
           {/* info box 1 */}
