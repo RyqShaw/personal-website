@@ -13,13 +13,13 @@ export default function Home() {
           className="bg-zinc-300 dark:bg-zinc-900 text-zinc-800
            dark:text-white shadow-lg
             m-4 mt-8 p-8 w-fit rounded-3xl mr-12
-            max-w-screen-lg"
+            max-w-screen-md"
         >
           {/* info box 1 */}
           <h1 className="text-3xl font-bold underline pb-5">{me.name}</h1>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <Image
-              className="h-48 w-48 md:h-auto rounded-3xl object-cover"
+              className="h-56 w-56 rounded-3xl object-cover"
               src={me.imageUrl}
               alt={'Photo of ' + me.name}
               width={me.imageSize}
