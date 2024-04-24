@@ -7,6 +7,8 @@ const me = {
 
 export default function Home() {
   return (
+    // TODO: Make a component for these small boxes to reuse\
+    // TODO: Make a bigger box thats horizontal
     <main>
       <div className="flex min-h-screen flex-col pl-24">
         <div
