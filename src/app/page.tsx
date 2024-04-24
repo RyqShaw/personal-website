@@ -19,7 +19,7 @@ export default function Home() {
         >
           {/* info box 1 */}
           <h1 className="text-3xl font-bold underline pb-5">{me.name}</h1>
-          <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
             <Image
               className="h-56 w-56 rounded-3xl object-cover"
               src={me.imageUrl}
@@ -44,7 +44,7 @@ export default function Home() {
         >
           {/* info box 1 */}
           <h1 className="text-3xl font-bold underline pb-5">Secondary Section</h1>
-          <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
             <Image
               className="h-56 w-56 rounded-3xl object-cover"
               src="https://tkahler.com/blog/wp-content/uploads/2016/11/20161121-chicago-syline-sunrise-ba01-hdr-edit.jpg"
