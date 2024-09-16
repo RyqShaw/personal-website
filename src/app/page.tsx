@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <div className="flex min-h-screen flex-col pl-24">
         <div
-          className="bg-zinc-300 dark:bg-zinc-900 text-zinc-800
+          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
            dark:text-white shadow-lg
             m-4 mt-8 p-8 w-fit rounded-3xl mr-12
             max-w-screen-md"
@@ -37,13 +37,13 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="bg-zinc-300 dark:bg-zinc-900 text-zinc-800
+          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95
            dark:text-white shadow-lg
             m-4 mt-8 p-8 w-fit rounded-3xl mr-12
             max-w-screen-md"
         >
           {/* info box 1 */}
-          <h1 className="text-3xl font-bold underline pb-5">Secondary Section</h1>
+          <h1 className="text-3xl font-bold underline pb-5">Current Projects</h1>
           <div className="flex flex-col md:flex-row md:justify-center md:items-center">
             <Image
               className="h-56 w-56 rounded-3xl object-cover"
