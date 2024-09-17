@@ -10,44 +10,99 @@ export default function Home() {
     // TODO: Make a component for these small boxes to reuse\
     // TODO: Make a bigger box thats horizontal
     <main>
-      {/*BOX 2*/}
-      <div className="grid grid-flow-col grid-cols-2 min-h-screen">
-        <div className="flex-col pl-24">
-
-          {/*BOX 1*/}
-          <div
-            className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
+      <div className="lg:grid lg:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-16">
+        {/*BOX 1*/}
+        <div
+          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
            dark:text-white shadow-lg
-            m-4 mt-8 p-8 w-fit rounded-3xl mr-12
-            max-w-screen-md"
+            m-4 mt-8 p-8 w-fit rounded-3xl"
+        >
+          <h1 className="text-3xl font-bold pb-5">Sharyq Siddiqi</h1>
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
+            <Image
+              className="h-56 w-56 rounded-3xl object-cover"
+              src={me.imageUrl}
+              alt={'Photo of ' + me.name}
+              width={me.imageSize}
+              height={me.imageSize}
+            />
+            <p className="p-8 md:pl-8 pl-0 text-pretty text-left text-lg">
+              Software Engineer <br></br>
+              Enthusiastic Learner <br></br>
+              Game Developer <br></br>
+              Guitarist
+            </p>
+          </div>
+        </div>
+
+        {/*BOX 2*/}
+        <div
+            className="hidden lg:block bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95
+           dark:text-white shadow-lg
+            m-4 mt-8 p-8 rounded-3xl mr-12"
           >
-            {/* info box 1 */}
-            <h1 className="text-3xl font-bold pb-5">{me.name}</h1>
+            <h1 className="text-2xl font-bold">Quick Links</h1>
             <div className="flex flex-col md:flex-row md:justify-center md:items-center">
-              <Image
-                className="h-56 w-56 rounded-3xl object-cover"
-                src={me.imageUrl}
-                alt={'Photo of ' + me.name}
-                width={me.imageSize}
-                height={me.imageSize}
-              />
-              <p className="p-8 md:pl-8 pl-0 text-pretty text-left text-lg">
-                Software Engineer <br></br>
-                Enthusiastic Learner <br></br>
-                Game Developer <br></br>
-                Guitarist
+              <p className="p-8 pl-0 text-pretty text-left">
+                Github
+              </p>
+              <p className="p-8 pl-0 text-pretty text-left">
+                Linkedin
+              </p>
+              <p className="p-8 pl-0 text-pretty text-left">
+                More About Me
+              </p>
+              <p className="p-8 pl-0 text-pretty text-left">
+                Get in Contact with Me
               </p>
             </div>
           </div>
 
-          {/*BOX 2*/}
-          <div
+        {/*BOX 3*/}
+        <div
+          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
+           dark:text-white shadow-lg
+            m-4 mt-8 p-8 w-fit rounded-3xl lg:row-span-2"
+        >
+          <h1 className="text-3xl font-bold pb-5">Featured Projects
+          </h1>
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
+            <Image
+              className="h-56 w-56 rounded-3xl object-cover"
+              src={me.imageUrl}
+              alt={'Photo of ' + me.name}
+              width={me.imageSize}
+              height={me.imageSize}
+            />
+            <p className="p-8 md:pl-8 pl-0 text-pretty text-left text-lg">
+              An Awesome Calendar <br></br>
+              Project made in Java <br></br>
+              using the Swing Library <br></br>
+            </p>
+          </div>
+          <div className="flex flex-col pt-12 md:flex-row md:justify-center md:items-center">
+          <p className="p-8 md:pl-8 pl-0 text-pretty text-left text-lg">
+              An Entry to <br></br>
+              a 48 hour Game Competition <br></br>
+              made in the Godot 4 Game Engine <br></br>
+            </p>
+            <Image
+              className="h-56 w-56 rounded-3xl object-cover"
+              src={me.imageUrl}
+              alt={'Photo of ' + me.name}
+              width={me.imageSize}
+              height={me.imageSize}
+            />
+          </div>
+        </div>
+
+        {/*BOX 4*/}
+        <div
             className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95
            dark:text-white shadow-lg
             m-4 mt-8 p-8 w-fit rounded-3xl mr-12
-            max-w-screen-md"
+            col-span-2"
           >
-            {/* info box 2 */}
             <h1 className="text-2xl font-bold">Who Am I?</h1>
             <div className="flex flex-col md:flex-row md:justify-center md:items-center">
               <p className="p-8 pl-0 text-pretty text-left">
@@ -59,7 +114,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
       </div>
     </main>
   );
