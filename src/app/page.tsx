@@ -6,6 +6,11 @@ const me = {
 };
 
 export default function Home() {
+  const roundedBox =
+  'bg-zinc-300 bg-opacity-85 dark:bg-zinc-900 dark:bg-opacity-85 text-zinc-800 dark:text-white shadow-lg m-4 mt-8 p-8 w-fit rounded-3xl';
+  const quickLinkBox = "hidden lg:block mr-12" + roundedBox;
+  const featuredProjects = roundedBox + " lg:mr-12 lg:row-span-2";
+  const aboutMe = roundedBox + " mr-12 col-span-2"
   return (
     // TODO: Make a component for these small boxes to reuse\
     // TODO: Make a bigger box thats horizontal
@@ -13,9 +18,7 @@ export default function Home() {
       <div className="lg:grid lg:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-16">
         {/*BOX 1*/}
         <div
-          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
-           dark:text-white shadow-lg
-            m-4 mt-8 p-8 w-fit rounded-3xl"
+          className={roundedBox}
         >
           <h1 className="text-3xl font-bold pb-5">Sharyq Siddiqi</h1>
           <div className="flex flex-col md:flex-row md:justify-center md:items-center">
@@ -37,9 +40,7 @@ export default function Home() {
 
         {/*BOX 2*/}
         <div
-            className="hidden lg:block bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95
-           dark:text-white shadow-lg
-            m-4 mt-8 p-8 rounded-3xl mr-12"
+            className={quickLinkBox}
           >
             <h1 className="text-2xl font-bold">Quick Links</h1>
             <div className="flex flex-col md:flex-row md:justify-center md:items-center">
@@ -60,9 +61,7 @@ export default function Home() {
 
         {/*BOX 3*/}
         <div
-          className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-zinc-800
-           dark:text-white shadow-lg
-            m-4 mt-8 p-8 w-fit rounded-3xl lg:row-span-2"
+          className={featuredProjects}
         >
           <h1 className="text-3xl font-bold pb-5">Featured Projects
           </h1>
@@ -98,10 +97,7 @@ export default function Home() {
 
         {/*BOX 4*/}
         <div
-            className="bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95
-           dark:text-white shadow-lg
-            m-4 mt-8 p-8 w-fit rounded-3xl mr-12
-            col-span-2"
+            className={aboutMe}
           >
             <h1 className="text-2xl font-bold">Who Am I?</h1>
             <div className="flex flex-col md:flex-row md:justify-center md:items-center">

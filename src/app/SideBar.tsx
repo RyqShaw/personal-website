@@ -24,7 +24,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="fixed top-2 left-2 h-screen w-16 m-0 flex flex-col justify-between bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-95 text-white shadow-lg rounded-lg">
+    <div className="fixed top-2 left-2 h-screen w-16 m-0 flex flex-col justify-between bg-zinc-300 bg-opacity-95 dark:bg-zinc-900 dark:bg-opacity-85 text-white shadow-lg rounded-lg">
       {/* Page Links Links */}
       <div className="flex flex-col justify-center h-full">
         <SideBarIcon icon={<FaHome size={'32'} />} text="Home" navigate={navigateHome} active={isActive('/')} />
