@@ -15,7 +15,7 @@ export default function Home() {
     // TODO: Make a component for these small boxes to reuse\
     // TODO: Make a bigger box thats horizontal
     <main>
-      <div className="lg:grid lg:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-16">
+      <div className="lg:grid lg:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-20">
         {/*BOX 1*/}
         <div className={roundedBox}>
           <h1 className="text-3xl font-bold pb-5">Sharyq Siddiqi</h1>
