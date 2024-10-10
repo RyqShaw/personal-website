@@ -1,4 +1,10 @@
+'use client';
 import Image from 'next/image';
+import { ReactNode } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { FaAddressBook, FaBook } from 'react-icons/fa';
+import { useRouter, usePathname } from 'next/navigation';
+
 const me = {
   name: 'Sharyq Siddiqi',
   imageUrl: 'https://avatars.githubusercontent.com/u/62477104?v=4',
@@ -6,16 +12,22 @@ const me = {
 };
 
 export default function Home() {
+  const router = useRouter();
+  const navigateGithub = () => router.push('https://github.com/RyqShaw');
+  const navigateLinkedin = () => router.push('https://www.linkedin.com/in/sharyqsiddiqi/');
+  const navigateAbout = () => router.push('/aboutme');
+  const navigateContact = () => router.push('/contact');
+  
   const roundedBox =
     'bg-zinc-300 bg-opacity-85 dark:bg-zinc-900 dark:bg-opacity-85 text-zinc-800 dark:text-white shadow-lg m-4 mt-8 p-8 w-fit rounded-3xl';
-  const quickLinkBox = 'hidden lg:block mr-12' + roundedBox;
-  const featuredProjects = roundedBox + ' lg:mr-12 lg:row-span-2';
+  const quickLinkBox = 'hidden xl:block ' + roundedBox;
+  const featuredProjects = roundedBox + ' xl:mr-12 xl:row-span-2';
   const aboutMe = roundedBox + ' mr-12 col-span-2';
   return (
     // TODO: Make a component for these small boxes to reuse\
     // TODO: Make a bigger box thats horizontal
     <main>
-      <div className="lg:grid lg:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-20">
+      <div className="xl:grid xl:grid-cols-3 md:flex md:flex-col auto-rows-max pl-24 gap-4 lg:pt-20">
         {/*BOX 1*/}
         <div className={roundedBox}>
           <h1 className="text-3xl font-bold pb-5">Sharyq Siddiqi</h1>
@@ -39,11 +51,31 @@ export default function Home() {
         {/*BOX 2*/}
         <div className={quickLinkBox}>
           <h1 className="text-2xl font-bold">Quick Links</h1>
-          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
-            <p className="p-8 pl-0 text-pretty text-left">Github</p>
-            <p className="p-8 pl-0 text-pretty text-left">Linkedin</p>
-            <p className="p-8 pl-0 text-pretty text-left">More About Me</p>
-            <p className="p-8 pl-0 text-pretty text-left">Get in Contact with Me</p>
+          <div className="flex flex-row justify-center items-center mt-20">
+            <SideBarIcon
+            icon={<FaGithub size={'48'} className="pt-0.5" />}
+            text="GitHub"
+            navigate={navigateGithub}
+            active={false}
+          />
+            <SideBarIcon
+            icon={<FaLinkedin size={'48'} className="pt-0.5" />}
+            text="Linkedin"
+            navigate={navigateLinkedin}
+            active={false}
+          />
+            <SideBarIcon
+          icon={<FaBook size={'48'} className="pt-0.5" />}
+          text="More About Me"
+          navigate={navigateAbout}
+          active={false}
+        />
+        <SideBarIcon
+          icon={<FaAddressBook size={'48'} className="pl-0.5 pt-0.5" />}
+          text="Contact Me"
+          navigate={navigateContact}
+          active={false}
+        />
           </div>
         </div>
 
@@ -96,3 +128,20 @@ export default function Home() {
     </main>
   );
 }
+
+const SideBarIcon = ({
+  icon,
+  text = 'tooltip',
+  navigate,
+  active = false,
+}: {
+  icon: ReactNode;
+  text: string;
+  navigate: any;
+  active: boolean;
+}) => (
+  <button onClick={navigate} className={`m-2 mt-2 panel-icon group ${active ? 'active-icon' : ''}`}>
+    {icon}
+    <span className="panel-tooltip group-hover:scale-100">{text}</span>
+  </button>
+);
