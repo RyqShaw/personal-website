@@ -21,17 +21,17 @@ export default function Home() {
   const roundedBox =
     'bg-zinc-300 bg-opacity-85 dark:bg-zinc-900 dark:bg-opacity-85 text-zinc-800 dark:text-white shadow-lg m-4 mt-2 p-8 w-full rounded-3xl overflow-hidden';
   const quickLinkBox = 'hidden xl:block ' + roundedBox;
-  const featuredProjects = roundedBox + ' xl:mr-12 xl:row-span-2';
+  const featuredProjects = roundedBox + 'xl:mr-12 xl:row-span-2';
   const aboutMe = roundedBox + 'mr-12 col-span-2';
   return (
     // TODO: Make a component for these small boxes to reuse\
     // TODO: Make a bigger box thats horizontal
     <main>
-      <div className="xl:grid xl:grid-cols-3 xl:auto-rows-fr pl-24 gap-4 lg:pt-20">
+      <div className="xl:grid xl:grid-cols-3 xl:auto-rows-fr pl-24 gap-4 lg:pt-20 mr-8">
         {/*BOX 1*/}
         <div className={roundedBox}>
           <h1 className="text-3xl font-bold pb-5">Sharyq Siddiqi</h1>
-          <div className="flex flex-col md:flex-row md:justify-center md:items-center">
+          <div className="flex flex-col md:flex-row md:items-center">
             <Image
               className="h-56 w-56 rounded-3xl object-cover max-w-full max-h-full"
               src={me.imageUrl}
