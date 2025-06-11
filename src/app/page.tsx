@@ -115,12 +115,12 @@ export default function Home() {
         <div className={aboutMe}>
           <h1 className="text-2xl font-bold">Who Am I?</h1>
           <div className="flex flex-col md:flex-row md:justify-center md:items-center">
-            <p className="p-8 pl-0 text-pretty text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+            <p className="p-8 pl-0 text-pretty text-left text-lg">
+              I'm a 21-year-old Computer Science major with a concentration in Artificial Intelligence at Northeastern University.
+              Game Development has been both a passion and a career, having done small projects and competitions since High School,
+              and having worked as a VR Game Programmer with Intermersive Media and Northeastern University. Looking to broaden my 
+              Horizon by learning about Artificial Intelligence and General Software Engineering. Currently wanting to learn more about
+              Low Level Programming on Embedded Systems!
             </p>
           </div>
         </div>
